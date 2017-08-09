@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewTwoModule", "ViewTwoMod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewThreeModule", "ViewThreeModule\ViewThreeModule.csproj", "{118D2736-14D2-4985-9248-A9BF85C7DA6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewFourModule", "ViewFourModule\ViewFourModule.csproj", "{264AD31F-B7B8-4682-9EF3-DE5683434CA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{118D2736-14D2-4985-9248-A9BF85C7DA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{118D2736-14D2-4985-9248-A9BF85C7DA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{118D2736-14D2-4985-9248-A9BF85C7DA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{264AD31F-B7B8-4682-9EF3-DE5683434CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{264AD31F-B7B8-4682-9EF3-DE5683434CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{264AD31F-B7B8-4682-9EF3-DE5683434CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{264AD31F-B7B8-4682-9EF3-DE5683434CA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

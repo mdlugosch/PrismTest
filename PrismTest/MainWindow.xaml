@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:cal="http://www.codeplex.com/CompositeWPF"
         Title="Prism Demo" Height="450" Width="525">
-    <Grid>
+    <Grid Background="LightGreen">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
@@ -13,7 +13,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
+        <StackPanel x:Name="ViewFour" cal:RegionManager.RegionName="ViewFour" Grid.Row="0">
             <TextBlock>
              Prism Test
              <LineBreak />  
@@ -23,6 +23,13 @@
              funktionen unter verwendung von MEF.
              <LineBreak />
               Dieser Bereich gehört zur Shell.
+             <LineBreak />
+             In diesem Abschnitt wird eine Region
+             <LineBreak />   
+             einem Stackpanel zugeordnet. 
+             <LineBreak />
+             (Custom RegionAdapter)
+             <LineBreak />
             </TextBlock>
         </StackPanel>
 

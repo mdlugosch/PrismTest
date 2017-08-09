@@ -9,6 +9,8 @@ using System.ComponentModel.Composition;
 using System;
 using Microsoft.Practices.Prism.Logging;
 using Microsoft.Practices.ServiceLocation;
+using Microsoft.Practices.Prism.Regions;
+using System.Windows.Controls;
 
 namespace PrismTest
 {
@@ -37,6 +39,9 @@ namespace PrismTest
             assemblyCatalog = new AssemblyCatalog(typeof(ViewThreeModule.ModuleThree).Assembly);
             AggregateCatalog.Catalogs.Add(assemblyCatalog);
 
+            assemblyCatalog = new AssemblyCatalog(typeof(ViewFourModule.ModuleFour).Assembly);
+            AggregateCatalog.Catalogs.Add(assemblyCatalog);
+
             base.ConfigureAggregateCatalog();
         }
         
@@ -44,6 +49,16 @@ namespace PrismTest
         {
             Application.Current.MainWindow = (MainWindow)Shell;
             Application.Current.MainWindow.Show();          
+        }
+
+        protected override RegionAdapterMappings ConfigureRegionAdapterMappings()
+        {
+            RegionAdapterMappings regionAdapterMappings = base.ConfigureRegionAdapterMappings();
+            var regionBehaviourFactory = Container.GetExportedValue<IRegionBehaviorFactory>();
+            regionAdapterMappings.RegisterMapping(typeof(StackPanel), new StackPanelRegionAdapter(regionBehaviourFactory));
+
+            return regionAdapterMappings;
+         
         }
         
     }
